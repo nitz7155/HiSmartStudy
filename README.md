@@ -1,4 +1,11 @@
 <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" /><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" /><img src="https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61DAFB" /><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+### 테스트용 계정 정보
+1. 관리자
+- 아이디: admin
+- 비밀번호: 1234
+2. 테스트 유저
+- 아이디: user001
+- 비밀번호: 1234
 
 # 세미프로젝트
 ## 주제 - 스터디 카페 관리 시스템
