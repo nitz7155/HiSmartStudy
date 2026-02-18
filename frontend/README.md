@@ -1,4 +1,7 @@
 ## 초기 프로젝트 설정법
+### 빌드 명령어
+1. npm run build
+2. npx serve -s dist
 ### 설치 명령어
 1. npm create vite@latest
 2. cd frontend
