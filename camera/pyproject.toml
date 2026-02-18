@@ -9,5 +9,15 @@ dependencies = [
     "fastapi>=0.124.2",
     "httpx>=0.28.1",
     "ultralytics>=8.3.236",
+    "torch==2.2.2",
     "uvicorn>=0.38.0",
 ]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
