@@ -1,4 +1,43 @@
 CREATE EXTENSION IF NOT EXISTS vector;
+CREATE TABLE IF NOT EXISTS members (
+    member_id BIGSERIAL PRIMARY KEY,
+    login_id VARCHAR(50) UNIQUE,
+    password VARCHAR(255),
+    phone VARCHAR(20) UNIQUE,
+    email VARCHAR(100),
+    birthday VARCHAR(20),
+    pin_code INT,
+    social_type VARCHAR(20),
+    total_mileage INT DEFAULT 0,
+    saved_time_minute INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    is_deleted_at BOOLEAN DEFAULT FALSE,
+    name VARCHAR(30) NOT NULL,
+    role VARCHAR(20) NOT NULL DEFAULT 'user',
+    kakao_id VARCHAR(255) UNIQUE,
+    naver_id VARCHAR(255) UNIQUE,
+    google_id VARCHAR(255) UNIQUE
+);
+CREATE TABLE IF NOT EXISTS products (
+    product_id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type VARCHAR(20) NOT NULL,
+    price INT NOT NULL,
+    value INT NOT NULL,
+    is_exposured BOOLEAN DEFAULT TRUE
+);
+CREATE TABLE IF NOT EXISTS seats (
+    seat_id BIGINT PRIMARY KEY, -- 직접 ID를 지정하므로 BIGSERIAL 대신 BIGINT
+    type VARCHAR(10) NOT NULL,
+    is_status BOOLEAN DEFAULT TRUE,
+    near_window BOOLEAN DEFAULT FALSE,
+    corner_seat BOOLEAN DEFAULT FALSE,
+    aisle_seat BOOLEAN DEFAULT FALSE,
+    isolated BOOLEAN DEFAULT FALSE,
+    near_beverage_table BOOLEAN DEFAULT FALSE,
+    is_center BOOLEAN DEFAULT FALSE
+);
 insert into members (login_id, password, name, role, phone) values ('admin', '$2b$12$VDQdV2/RR3gSP8MNMrZPjucK7SftXGUFa2vXoDrSboIGVGqnfR6n2','관리자', 'admin', '010-1234-1234');
 insert into members (name, role) values ('비회원', 'guest');
 insert into members (login_id, password, name, role, phone, email) values ('hgd1234', '$2b$12$VDQdV2/RR3gSP8MNMrZPjucK7SftXGUFa2vXoDrSboIGVGqnfR6n2', '홍길동', 'user', '010-1111-1111', 'hong@naver.com');
