@@ -1,0 +1,40 @@
+/* :root {
+    --color-default: #D3D3D3;
+    --color-black: #000;
+    --color-red: #FF0000;
+}
+
+.info-box {
+    width: 100%;
+    padding-bottom: 20px;
+    border: solid 1px blue;
+}
+
+.info-box h1 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.user-info-box input {
+    display: block;
+    border: solid 2px var(--color-default);
+}
+
+.user-phone-box {
+    display: flex;
+    gap: 5px;
+}
+
+.user-phone-box>input {
+    width: 80px;
+}
+
+.discount-info-box>button {
+    margin-right: 10px;
+    border: solid 1px red;
+}
+
+.discount-info-box>input {
+    text-align: right;
+    border: solid 1px red;
+} */
